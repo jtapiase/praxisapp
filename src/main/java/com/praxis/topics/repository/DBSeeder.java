@@ -11,8 +11,8 @@ import java.util.List;
 public class DBSeeder implements CommandLineRunner {
     private TopicRepository  topicRepository;
 
-    public DBSeeder(TopicRepository userRepository) {
-        this.topicRepository = userRepository;
+    public DBSeeder(TopicRepository topicRepository) {
+        this.topicRepository = topicRepository;
     }
 
     @Override
@@ -30,8 +30,8 @@ public class DBSeeder implements CommandLineRunner {
         // add topics to the db
 
         List<Topic> topics = Arrays.asList(topic1,topic2, topic3, topic4);
-        //this.topicRepository.save(topics);
-        this.topicRepository.save(topic1);
+        this.topicRepository.save(topics);
+        //this.topicRepository.save(topic1);
 
     }
 
