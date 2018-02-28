@@ -1,6 +1,11 @@
 package com.praxis.topics.entity;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "Details")
 public class Detail {
+    @Id
     private Topic topics;
     private int expertise;
 
