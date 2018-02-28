@@ -16,7 +16,7 @@ public class TopicServiceImpl implements TopicService{
 
     @Override
     public List<Topic> getAllTopics() {
-        return topicRepository.findAll();
+        return this.topicRepository.findAll();
     }
 
 

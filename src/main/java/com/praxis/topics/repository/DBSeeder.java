@@ -2,10 +2,12 @@ package com.praxis.topics.repository;
 
 import com.praxis.topics.entity.Topic;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.List;
 
+@Component
 public class DBSeeder implements CommandLineRunner {
     private TopicRepository  topicRepository;
 
@@ -28,7 +30,8 @@ public class DBSeeder implements CommandLineRunner {
         // add topics to the db
 
         List<Topic> topics = Arrays.asList(topic1,topic2, topic3, topic4);
-        this.topicRepository.save(topics);
+        //this.topicRepository.save(topics);
+        this.topicRepository.save(topic1);
 
     }
 
