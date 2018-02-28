@@ -8,7 +8,6 @@ import java.util.UUID;
 @Document(collection = "Topics")
 public class Topic {
     @Id
-    private UUID id;
     private String name;
     private String description;
     private int status;
@@ -19,22 +18,13 @@ public class Topic {
     private String closedAt;
     private String expiredAt;
 
-    public Topic(UUID id, String name, String description) {
-        this.id = id;
+    public Topic(String name, String description) {
         this.name = name;
         this.description = description;
     }
 
     public Topic() {
 
-    }
-
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
     }
 
     public String getName() {
