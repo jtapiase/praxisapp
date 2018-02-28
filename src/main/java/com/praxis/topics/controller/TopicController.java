@@ -13,12 +13,13 @@ import java.util.List;
 @RestController
 @RequestMapping("/topics")
 public class TopicController {
-    @Autowired
+    //@Autowired
     @Qualifier("topicServiceImp")
     private TopicServiceImpl topicServiceImpl;
 
     @GetMapping
     public List<Topic> getAllTopics() {
+
         return topicServiceImpl.getAllTopics();
     }
 
