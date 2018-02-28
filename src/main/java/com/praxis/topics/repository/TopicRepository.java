@@ -10,6 +10,6 @@ import java.util.List;
 public interface TopicRepository extends MongoRepository<Topic, String> {
 
     Topic findByName(String name);
-    // List<Topic> find();
+    List<Topic> findAll();
 
 }

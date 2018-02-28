@@ -13,9 +13,9 @@ public class TopicServiceImpl implements TopicService{
     @Qualifier("TopicRepository")
     private TopicRepository topicRepository;
 
-
     @Override
     public List<Topic> getAllTopics() {
+
         return this.topicRepository.findAll();
     }
 
